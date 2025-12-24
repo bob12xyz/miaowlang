@@ -109,6 +109,116 @@ void sayhello() {
 (extern (sayhello))
 (sayhello) ; prints "hello from c cat"
 ```
+## intrinsic functions
+
+
+### Arithmetic Intrinsics
+
+| function name | argument types        | return type | description            |
+| ------------- | --------------------- | ----------- | ---------------------- |
+| +             | Int Int / Float Float | Int / Float | adds two numbers       |
+| -             | Int Int / Float Float | Int / Float | subtracts two numbers  |
+| *             | Int Int / Float Float | Int / Float | multiplies two numbers |
+| /             | Int Int / Float Float | Int / Float | divides two numbers    |
+| %             | Int Int / Float Float | Int / Float | modulo operation       |
+
+---
+
+### Compound / Modifying Arithmetic
+
+| function name | argument types        | return type | description                              |
+| ------------- | --------------------- | ----------- | ---------------------------------------- |
+| ++            | Int / Float           | Int / Float | increments value by 1                    |
+| --            | Int / Float           | Int / Float | decrements value by 1                    |
+| +=            | Int Int / Float Float | Int / Float | adds RHS to LHS and stores result        |
+| -=            | Int Int / Float Float | Int / Float | subtracts RHS from LHS and stores result |
+| eat           | Int / Float           | Int / Float | makes number fatter by 1                 |
+| exercise      | Int / Float           | Int / Float | makes number thinner by 1                |
+
+---
+
+### Comparison Operators
+
+| function name | argument types        | return type | description                      |
+| ------------- | --------------------- | ----------- | -------------------------------- |
+| ==            | Int Int / Float Float | Bool        | equality comparison              |
+| !=            | Int Int / Float Float | Bool        | inequality comparison            |
+| >             | Int Int / Float Float | Bool        | greater-than comparison          |
+| >=            | Int Int / Float Float | Bool        | greater-than-or-equal comparison |
+| <             | Int Int / Float Float | Bool        | less-than comparison             |
+| <=            | Int Int / Float Float | Bool        | less-than-or-equal comparison    |
+
+---
+
+### Boolean Logic
+
+| function name | argument types | return type | description |
+| ------------- | -------------- | ----------- | ----------- |
+| !             | Bool           | Bool        | logical NOT |
+| &&            | Bool Bool      | Bool        | logical AND |
+| ||            | Bool Bool      | Bool        | logical OR  |
+
+---
+
+### Variable Management
+
+| function name | argument types          | return type | description                                    |
+| ------------- | ----------------------- | ----------- | ---------------------------------------------- |
+| def           | TypedIdentifier [Value] | Type        | declares a variable (type annotation required) |
+| =             | Identifier Value        | Type        | reassigns an existing variable                 |
+
+---
+
+### Control Flow
+
+| function name | argument types | return type | description                         |
+| ------------- | -------------- | ----------- | ----------------------------------- |
+| return        | none           | Nil         | returns from function with no value |
+| return        | Any            | Any         | returns value from function         |
+
+---
+
+### I/O
+
+| function name | argument types | return type | description             |
+| ------------- | -------------- | ----------- | ----------------------- |
+| meow          | Str            | Nil         | prints string to stdout |
+
+---
+
+### Type Conversions
+
+| function name | argument types | return type | description                |
+| ------------- | -------------- | ----------- | -------------------------- |
+| ->S           | Char           | Str         | converts char to string    |
+| ->S           | Int            | Str         | converts integer to string |
+| ->S           | Float          | Str         | converts float to string   |
+| ->S           | Bool           | Str         | converts boolean to string |
+| ->I           | Str            | Int         | parses integer from string |
+
+---
+
+### Array Creation & Access
+
+| function name | argument types | return type | description                    |
+| ------------- | -------------- | ----------- | ------------------------------ |
+| array         | T...           | Array<T>    | creates array from elements    |
+| len           | Array<T> / Str | Int         | returns array or string length |
+| get           | Array<T> Int   | T           | retrieves element at index     |
+| set           | Array<T> Int T | Nil         | sets element at index          |
+
+---
+
+### Array / String Mutation
+
+| function name | argument types | return type | description                      |
+| ------------- | -------------- | ----------- | -------------------------------- |
+| append        | Array<T> T     | Array<T>    | appends element to array         |
+| insert        | Array<T> Int T | Array<T>    | inserts element at index         |
+| remove        | Array<T> Int   | Array<T>    | removes element at index         |
+| pop_back      | Array<T>       | T           | removes and returns last element |
+
+
 
 ## compiling
 `make` will build a `miaow` binary. 
