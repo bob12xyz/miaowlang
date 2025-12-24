@@ -1,0 +1,12 @@
+{
+    (def Int:x 1)
+    (while (<= x 100) {
+        (if (== (% x 15) 0) (meow "FizzBuzz") 
+        (if (== (% x 3) 0) (meow "Fizz")
+        (if (== (% x 5) 0) (meow "Buzz")
+            (meow (->S x))
+        )))
+
+        (eat x)
+    }) 
+}
