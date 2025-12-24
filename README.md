@@ -156,7 +156,7 @@ void sayhello() {
 | ------------- | -------------- | ----------- | ----------- |
 | !             | Bool           | Bool        | logical NOT |
 | &&            | Bool Bool      | Bool        | logical AND |
-| ||            | Bool Bool      | Bool        | logical OR  |
+| &#124;&#124;            | Bool Bool      | Bool        | logical OR  |
 
 ---
 
