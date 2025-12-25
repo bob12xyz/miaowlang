@@ -1,5 +1,6 @@
 # miaowlang
 
+_dedicated to my dad_
 miaowlang is a functional, statically typed programming language with a lisp syntax. It combines ahead of time compilation and type safety with the expressiveness of lisp.
 The miaow compiler is based on llvm.
 
